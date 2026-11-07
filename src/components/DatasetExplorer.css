@@ -1,0 +1,146 @@
+
+.dataset-explorer {
+  width: 100%;
+  min-width: 0;
+}
+
+.dataset-header {
+  margin-bottom: 2rem;
+}
+
+.dataset-header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.dataset-header p,
+.dataset-help {
+  color: #64748b;
+}
+
+.dataset-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dataset-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.dataset-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dataset-stat-label {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.dataset-section {
+  margin-bottom: 2rem;
+}
+
+.dataset-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.target-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.target-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.target-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.target-progress {
+  height: 12px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  border-radius: 999px;
+}
+
+.target-progress-fill {
+  height: 100%;
+  background-color: #0d9488;
+  border-radius: inherit;
+}
+
+.dataset-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.dataset-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.dataset-table th,
+.dataset-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+}
+
+.dataset-table thead {
+  background-color: #f8fafc;
+}
+
+.dataset-table tbody tr:last-child th,
+.dataset-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dataset-error {
+  padding: 1rem;
+  color: #991b1b;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .dataset-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dataset-stat-card {
+    padding: 1rem;
+  }
+
+  .dataset-stat-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .dataset-stats {
+    grid-template-columns: 1fr;
+  }
+}
