@@ -1,0 +1,240 @@
+
+.model-prediction {
+  width: 100%;
+  min-width: 0;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.prediction-header {
+  margin-bottom: 1.5rem;
+}
+
+.prediction-header h2 {
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+  font-size: 1.75rem;
+}
+
+.prediction-header p,
+.prediction-help {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.prediction-model-panel {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #f8fafc;
+}
+
+.prediction-model-panel h3 {
+  margin: 0.5rem 0;
+  color: #0f172a;
+}
+
+.prediction-model-panel p {
+  margin: 0.5rem 0;
+}
+
+.prediction-model-status {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.prediction-button {
+  padding: 0.85rem 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #0f766e;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.prediction-button:hover:not(:disabled) {
+  background-color: #115e59;
+}
+
+.prediction-button:focus-visible,
+.prediction-secondary-button:focus-visible {
+  outline: 3px solid #14b8a6;
+  outline-offset: 3px;
+}
+
+.prediction-button:disabled,
+.prediction-secondary-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.prediction-form {
+  margin-bottom: 2rem;
+}
+
+.prediction-form-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prediction-form-heading h3 {
+  margin: 0;
+}
+
+.prediction-secondary-button {
+  padding: 0.65rem 1rem;
+  border: 1px solid #0f766e;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #0f766e;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.prediction-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.prediction-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.5rem;
+}
+
+.prediction-field label {
+  color: #334155;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.prediction-field input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #0f172a;
+  font: inherit;
+}
+
+.prediction-field input:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 2px;
+}
+
+.prediction-error {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+.prediction-result {
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #f8fafc;
+}
+
+.prediction-result h3 {
+  margin-top: 0;
+}
+
+.prediction-result-label {
+  color: #0f766e;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.prediction-probabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.prediction-probability-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prediction-probability-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.prediction-progress {
+  display: block;
+  width: 100%;
+  height: 16px;
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  accent-color: #0d9488;
+}
+
+.prediction-progress::-webkit-progress-bar {
+  background-color: #e2e8f0;
+  border-radius: 999px;
+}
+
+.prediction-progress::-webkit-progress-value {
+  background-color: #0d9488;
+  border-radius: 999px;
+}
+
+.prediction-progress::-moz-progress-bar {
+  background-color: #0d9488;
+  border-radius: 999px;
+}
+
+.prediction-disclaimer {
+  margin-top: 1.5rem;
+  color: #64748b;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .prediction-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .prediction-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .prediction-model-panel,
+  .prediction-result {
+    padding: 1rem;
+  }
+
+  .prediction-header h2 {
+    font-size: 1.5rem;
+  }
+}

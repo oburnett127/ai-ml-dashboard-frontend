@@ -1,6 +1,8 @@
 
 import DatasetExplorer from "./components/DatasetExplorer";
 import ModelTraining from "./components/ModelTraining";
+import ModelComparison from "./components/ModelComparison";
+import ModelPrediction from "./components/ModelPrediction";
 import "./App.css";
 
 export default function App() {
@@ -10,14 +12,18 @@ export default function App() {
         <h1>AI-Assisted ML Dashboard</h1>
 
         <p>
-          Explore datasets, train models, and evaluate
-          machine learning performance.
+          Explore datasets, train models, compare algorithms,
+          and make machine learning predictions.
         </p>
       </header>
 
       <DatasetExplorer />
 
       <ModelTraining />
+
+      <ModelComparison />
+
+      <ModelPrediction />
     </main>
   );
 }
